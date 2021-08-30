@@ -1,1 +1,151 @@
-/* You can add global styles to this file, and also import other style files */
+/*
+  Reset
+*/
+@import '~animate.css/animate.min.css';
+@import './assets/scss/variables.scss';
+
+*{
+  margin:0;
+  padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    width: 100vw;
+    height: 100vh;
+    line-height: 1.2;
+
+    p{
+      line-height: 1.8;
+    }
+}
+
+h1 {
+    font-size: 5rem;
+    line-height: 1.2;
+}
+
+nav{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100%;
+  z-index: 99;
+
+  ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: center;
+    gap: 4rem;
+
+    li{
+      a{
+        text-decoration: none;
+        color: #000000;
+        position: relative;
+        &.active{
+          &::before {
+              content: "";
+              width: 100%;
+              margin: 0 auto;
+              position: absolute;
+              background: #fd2d77;
+              height: 3px;
+              top: -1rem;
+              box-shadow: 1px 1px 10px #eae;
+          }
+        }
+      }
+    }
+  }
+}
+
+header {
+  min-height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section{
+  padding: 2rem 0;
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+
+  .column{
+    width: 50%;
+    padding: 0 4rem;
+    align-self: center;
+  }
+
+  &.flex-column{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  }
+}
+
+/* Spacers */
+
+.sp-pt-1{
+  padding-top: 1rem !important;
+}
+
+.sp-pt-2{
+  padding-top: 2rem !important;
+}
+
+
+/* Default Button Styling */
+
+.btn{
+  margin: 2rem 0;
+  padding: 1rem 2rem;
+  background-color: #fd2d77;
+  color: #ffffff;
+  border-radius: 3rem;
+  display: block;
+  width: max-content;
+  text-decoration: none;
+  transition: all .3s ease-in-out;
+
+  &:hover{
+    color: #fd2d77;
+    background-color: #eaeaea;
+  }
+}
+
+/* Social Links */
+
+ul.social-links {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+    transition: all .3s ease-in-out;
+
+    a{
+transition: all .3s ease-in-out;
+      i{
+transition: all .3s ease-in-out;
+        &::before{
+         font-size: 2rem;
+          color: #bdbdbd;
+          transition: all .3s ease-in-out;
+        }
+      }
+      &:hover{
+        i::before{
+          color: #313131 !important;
+        }
+      }
+    }
+}

@@ -1,0 +1,20 @@
+<div class="stats-loader animate__animated animate__fadeOut" *ngIf="!stats">
+<img src="../../../assets/img/covid-preloader.gif" alt="">
+</div>
+<div class="world-counter animate__animated animate__fadeIn" *ngIf="stats">
+  <div>
+    <h3>Coronavirus Cases</h3>
+    <p>{{stats.total_cases}}</p>
+  </div>
+  <div>
+    <h3>Total Deaths</h3>
+    <p>{{stats.total_deaths}}</p>
+  </div>
+  <div>
+     <h3>Total Recovered</h3>
+      <p>{{stats.total_recovered}}</p>
+  </div>
+</div>
+<div class="world-status" *ngIf="stats">
+    <p>Last Updated: {{stats.statistic_taken_at | date:'long'}}</p>
+</div>
